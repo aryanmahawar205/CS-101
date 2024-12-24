@@ -1,0 +1,8 @@
+To solve any pattern based question, follow 4 rules:
+
+Generally, the outer loop is for the rows and the inner loop is for columns
+
+1. For the outer loop, count the number of lines
+2. For the inner loop, focus on the number of columns and connect them somehow to the rows
+3. Whatever you are printing, do it in the inner for loop
+4. Observe symmetry (only applicable to certain patterns)

@@ -1,0 +1,9 @@
+// this is a test
+int a    =    5;     // declare a
+float   b = 3.14;    
+
+/* multi-line 
+   comment here */
+char c;
+
+/* inline */ int d = 7;    // trailing

@@ -1,0 +1,5 @@
+Identifier     Reason
+%dfknd         Invalid identifier name
+b              Undeclared variable
+x              Undeclared variable
+y              Undeclared variable

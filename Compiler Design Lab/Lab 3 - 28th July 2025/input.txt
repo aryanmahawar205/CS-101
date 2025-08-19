@@ -1,0 +1,7 @@
+char c;
+int a = 20;
+char %dfknd, unit;
+float value;
+boolean is_prime;
+b = x+y;
+a = 45;

@@ -1,0 +1,41 @@
+=== Token Analysis ===
+
+Keywords (7):
+  - bool
+  - char
+  - float
+  - if
+  - int
+  - return
+  - true
+
+Literals (6):
+  - 'x'
+  - 0
+  - 1
+  - 10
+  - 14
+  - 3
+
+Identifiers (8):
+  - Compiler
+  - a
+  - b
+  - ch
+  - isReady
+  - main
+  - msg
+  - string
+
+Punctuations/Operators (11):
+  - !
+  - (
+  - )
+  - +
+  - ,
+  - .
+  - ;
+  - <
+  - =
+  - {
+  - }

@@ -69,7 +69,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 8 "prog1.y"
+#line 8 "prog5.y"
  int num; 
 
 #line 76 "y.tab.h"

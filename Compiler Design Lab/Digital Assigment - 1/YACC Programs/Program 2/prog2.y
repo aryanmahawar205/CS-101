@@ -1,30 +1,20 @@
-/*
-DA-1 : Yacc Program 2
----------------------------------------
-Problem Statement:
-Write a Yacc program that validates
-whether an input string is a valid C identifier.
-Rules:
-- Must start with letter/underscore
-- Can contain letters, digits, underscore
-- Cannot be keyword
-*/
 %{
 #include <stdio.h>
 #include <stdlib.h>
-int yylex(void);
-int yyerror(char *s) { printf("Invalid Identifier\n"); return 0; }
+int yylex();
+int yyerror(char *s) { printf("Error parsing number\n"); return 0; }
 %}
 
-%token ID
+%union { int num; }
+%token <num> NUM
 
 %%
-start : ID { printf("Valid Identifier\n"); }
+start : NUM { if ($1 % 2 == 0) printf("%d is Even\n", $1);
+              else printf("%d is Odd\n", $1); }
       ;
 %%
 
 int main() {
-    printf("Enter an identifier:\n");
-    yyparse();
-    return 0;
+    printf("Enter a number:\n");
+    return yyparse();
 }

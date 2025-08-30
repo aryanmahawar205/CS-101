@@ -74,7 +74,7 @@
 int yylex();
 int yyerror(char *s) { printf("Invalid boolean expression\n"); return 0; }
 
-#line 78 "y.tab.c"
+#line 78 "prog1.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -97,61 +97,7 @@ int yyerror(char *s) { printf("Invalid boolean expression\n"); return 0; }
 #  endif
 # endif
 
-/* Use api.header.include to #include this header
-   instead of duplicating it here.  */
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
-/* Debug traces.  */
-#ifndef YYDEBUG
-# define YYDEBUG 0
-#endif
-#if YYDEBUG
-extern int yydebug;
-#endif
-
-/* Token kinds.  */
-#ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-  enum yytokentype
-  {
-    YYEMPTY = -2,
-    YYEOF = 0,                     /* "end of file"  */
-    YYerror = 256,                 /* error  */
-    YYUNDEF = 257,                 /* "invalid token"  */
-    NUM = 258                      /* NUM  */
-  };
-  typedef enum yytokentype yytoken_kind_t;
-#endif
-/* Token kinds.  */
-#define YYEMPTY -2
-#define YYEOF 0
-#define YYerror 256
-#define YYUNDEF 257
-#define NUM 258
-
-/* Value type.  */
-#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-union YYSTYPE
-{
-#line 8 "prog1.y"
- int num; 
-
-#line 140 "y.tab.c"
-
-};
-typedef union YYSTYPE YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
-# define YYSTYPE_IS_DECLARED 1
-#endif
-
-
-extern YYSTYPE yylval;
-
-
-int yyparse (void);
-
-
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#include "prog1.tab.h"
 /* Symbol kind.  */
 enum yysymbol_kind_t
 {
@@ -1116,35 +1062,35 @@ yyreduce:
   case 2: /* expr: expr '|' expr  */
 #line 18 "prog1.y"
                      { (yyval.num) = (yyvsp[-2].num) || (yyvsp[0].num); printf("= %d\n", (yyval.num)); }
-#line 1120 "y.tab.c"
+#line 1066 "prog1.tab.c"
     break;
 
   case 3: /* expr: expr '&' expr  */
 #line 19 "prog1.y"
                      { (yyval.num) = (yyvsp[-2].num) && (yyvsp[0].num); printf("= %d\n", (yyval.num)); }
-#line 1126 "y.tab.c"
+#line 1072 "prog1.tab.c"
     break;
 
   case 4: /* expr: '!' expr  */
 #line 20 "prog1.y"
                      { (yyval.num) = !(yyvsp[0].num); printf("= %d\n", (yyval.num)); }
-#line 1132 "y.tab.c"
+#line 1078 "prog1.tab.c"
     break;
 
   case 5: /* expr: '(' expr ')'  */
 #line 21 "prog1.y"
                      { (yyval.num) = (yyvsp[-1].num); }
-#line 1138 "y.tab.c"
+#line 1084 "prog1.tab.c"
     break;
 
   case 6: /* expr: NUM  */
 #line 22 "prog1.y"
                      { (yyval.num) = (yyvsp[0].num); }
-#line 1144 "y.tab.c"
+#line 1090 "prog1.tab.c"
     break;
 
 
-#line 1148 "y.tab.c"
+#line 1094 "prog1.tab.c"
 
       default: break;
     }

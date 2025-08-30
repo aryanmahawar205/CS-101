@@ -7,7 +7,7 @@
   packages = [
     pkgs.gcc
     pkgs.flex
-    pkgs._9base
+    pkgs.bison
   ];
   # Enable Docker
   services.docker = {

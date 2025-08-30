@@ -1,14 +1,13 @@
 %{
 #include "y.tab.h"
+#include <string.h>
+#include <stdlib.h>
 %}
 
 %%
-"if"        { return IF; }
-"else"      { return ELSE; }
-"(".*")"    { return COND; }
-[a-zA-Z0-9]+ { return STMT; }
+[a-zA-Z]+   { yylval.str = strdup(yytext); return ID; }
 [ \t\n]+    ;
-.           ;
+.           { return yytext[0]; }
 %%
 
 int yywrap() { return 1; }

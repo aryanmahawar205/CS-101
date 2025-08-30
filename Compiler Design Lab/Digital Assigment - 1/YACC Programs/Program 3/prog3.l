@@ -1,14 +1,14 @@
 %{
 #include "y.tab.h"
-#include <ctype.h>
+#include <stdlib.h>
 %}
 
+digit [0-9]
+
 %%
-[0-9]+              { yylval = atoi(yytext); return NUM; }
-[a-z]               { yylval = yytext[0]-'a'; return ID; }
-[=+\-*/\n]          { return yytext[0]; }
-[ \t]+              ;
-.                   ;
+{digit}+    { yylval.num = atoi(yytext); return NUM; }
+[ \t\n]+    ;
+.           { return yytext[0]; }
 %%
 
 int yywrap() { return 1; }

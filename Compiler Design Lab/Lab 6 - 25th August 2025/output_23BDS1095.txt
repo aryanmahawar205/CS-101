@@ -1,0 +1,6 @@
+a = b + (c - d) → Invalid
+a * → Invalid
+c = -a → Invalid
+d = a * -a → Invalid
+e = a * ( -a ) → Invalid
+f = (a + b → Invalid

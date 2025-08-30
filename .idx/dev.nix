@@ -6,6 +6,8 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.gcc
+    pkgs.flex
+    pkgs._9base
   ];
   # Enable Docker
   services.docker = {

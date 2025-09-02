@@ -1,3 +1,6 @@
+// Given an array of integers A, Design a DCC based algorithm to compute the maximum
+// integers in the array and analyse them.
+
 #include <iostream>
 #include <vector>
 

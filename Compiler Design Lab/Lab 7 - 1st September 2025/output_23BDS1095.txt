@@ -1,0 +1,17 @@
+FIRST and FOLLOW Sets:
+
+FIRST(E) = { (, id }
+FOLLOW(E) = { ), $ }
+
+FIRST(E') = { +, # }
+FOLLOW(E') = { ), $ }
+
+FIRST(F) = { (, id }
+FOLLOW(F) = { ), *, +, $ }
+
+FIRST(T) = { (, id }
+FOLLOW(T) = { ), +, $ }
+
+FIRST(T') = { *, # }
+FOLLOW(T') = { ), +, $ }
+

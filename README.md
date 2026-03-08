@@ -1,1 +1,1 @@
-# VIT Chennai - 5th Semester Lab Courses (CS101)
+# VIT Chennai - 5th & 6th Semester Lab Courses (CS101)

@@ -8,6 +8,10 @@
     pkgs.gcc
     pkgs.flex
     pkgs.bison
+    pkgs.sudo
+    pkgs.gnumake
+    pkgs.openssl
+    pkgs.openssl.dev
   ];
   # Enable Docker
   services.docker = {
